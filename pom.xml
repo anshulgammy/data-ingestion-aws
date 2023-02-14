@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>nerd.utopian</groupId>
+  <artifactId>movie-data-ingestion</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <version.aws.sdk.kinesis>1.12.405</version.aws.sdk.kinesis>
+    <version.aws.sdk.lambda>1.2.2</version.aws.sdk.lambda>
+    <version.aws.sdk.events>3.11.0</version.aws.sdk.events>
+    <version.aws.sdk.dynamodb>1.12.405</version.aws.sdk.dynamodb>
+    <version.aws.sdk.s3>1.12.405</version.aws.sdk.s3>
+    <version.guava>31.1-jre</version.guava>
+    <version.gson>2.10.1</version.gson>
+    <version.apache.commons>3.12.0</version.apache.commons>
+    <version.junit>5.9.2</version.junit>
+  </properties>
+
+  <modules>
+    <module>movie-data-producer-lambda</module>
+  </modules>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${version.junit}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
